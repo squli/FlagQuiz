@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3">
+
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:name="ru.squel.flagquiz.ui.SettingsActivityFragment"
+            android:id="@+id/settingsActivityFragment"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            tools:layout="@layout/activity_settings" />
+
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:name="ru.squel.flagquiz.ui.MainActivityFragment"
+            android:id="@+id/quizFragment"
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            tools:layout="@layout/fragment_main" />
+    </LinearLayout>
+
+</LinearLayout>
